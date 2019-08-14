@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+
+# Webstorm
+.idea/
+
+# Built project
+build/
+
+# MacOS
+.DS_Store
+
+# dotenv
+.env
+
+# miscellaneous
+.history
