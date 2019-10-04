@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { createGoals } from '../../../demoData/goals'
+import { createDemoGoals } from '../../../demoData/goals'
 
 interface IProps {
 
@@ -14,7 +14,7 @@ export class Goals extends React.Component<IProps, IState> {
     //@ts-ignore
     super()
     this.state = {
-      goals: createGoals()
+      goals: createDemoGoals()
     }
   }
 
@@ -26,7 +26,7 @@ export class Goals extends React.Component<IProps, IState> {
     return (
       <div className={'example'}>
         {goals.map(item => (
-            <div>
+            <div key={item.id}>
               {item.name}
               <p><b>Due:</b> {item.due}</p>
             </div>
