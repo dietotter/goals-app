@@ -12,4 +12,10 @@ https://medium.com/@rossbulat/how-to-use-typescript-with-react-and-redux-a118b1e
 
 https://github.com/piotrwitek/react-redux-typescript-guide#recipes
 
+https://github.com/supasate/connected-react-router/tree/master/examples/typescript/src
+
 https://medium.com/swinginc/react-redux-typescript-into-the-better-frontend-tutorial-d32f46e97995
+
+### Things to think about
+
+[How to use *react-hot-loader* better with TS](https://github.com/gaearon/react-hot-loader#typescript)

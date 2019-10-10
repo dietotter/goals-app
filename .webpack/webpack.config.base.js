@@ -19,8 +19,8 @@ module.exports = {
   stats: 'minimal',
 
   entry: {
+    app: ['@babel/polyfill', 'react-hot-loader/patch', './src/index.tsx'],
     vendor,
-    app: ['@babel/polyfill', './src/index.tsx'],
   },
 
   output: {
@@ -33,6 +33,9 @@ module.exports = {
   },
 
   resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    },
     modules: ['node_modules', 'src'],
     extensions: ['.ts', '.tsx', '.js'],
   },

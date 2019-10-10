@@ -8,7 +8,7 @@ import createRootReducer from './rootReducer'
 
 export const history = createBrowserHistory()
 
-function configureStore(preloadedState) {
+function configureStore(preloadedState?: any) {
     const middlewares = [routerMiddleware(history), loggerMiddleware, thunkMiddleware]
     const middlewareEnhancer = applyMiddleware(...middlewares)
 
@@ -18,7 +18,7 @@ function configureStore(preloadedState) {
     //@ts-ignore
     const store = createStore(createRootReducer(history), preloadedState, composedEnhancers)
 
-    if (process.env.NODE_ENV !== 'production' && module.hot) {
+    if (process.env.NODE_ENV !== 'production' && module.hot) { // enable reducers hot reloading
         module.hot.accept('./rootReducer', () => store.replaceReducer(createRootReducer(history)))
     }
 

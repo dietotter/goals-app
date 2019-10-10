@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const { DefinePlugin } = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const configBase = require('./webpack.config.base.js');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -30,17 +30,15 @@ const configProd = {
           compress: {
             inline: false,
           },
-          mangle: {
-            safari10: true,
-          },
+          mangle: false,
         },
       }),
     ],
   },
 
   plugins: [
-    new CleanWebpackPlugin(['./../build/dist'], {
-      allowExternal: true,
+    new CleanWebpackPlugin({
+      dangerouslyAllowCleanPatternsOutsideProject: true,
       verbose: true,
     }),
     new DefinePlugin({
