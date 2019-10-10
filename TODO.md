@@ -8,6 +8,10 @@
 - [ ] Read about React with TS and convert basic page fully to TS
 - [ ] Init Redux with TS (https://redux.js.org/recipes/usage-with-typescript)
 
-##### ^ That (+ styles connected) could be added for boilerplate project ^
+##### ^ That (+ styles connected and linter) could be added for boilerplate project ^
 
-- [ ] smth
+- [ ] Think about back-end
+
+
+### Postponed:
+- [ ] 
