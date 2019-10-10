@@ -3,14 +3,14 @@ import * as ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 
 import Root from 'root' // allowed to write like this (w/o './root') by tsconfig options baseUrl and paths
-import configureStore from 'app-redux/configureStore'
+import configureStore, { history } from 'app-redux/configureStore'
 
 const store = configureStore({})
 
 const renderApp = () =>
     ReactDOM.render(
         <Provider store={store}>
-            <Root />
+            <Root history={history}/>
         </Provider>,
         document.getElementById('app') as HTMLElement
     )

@@ -1,7 +1,17 @@
 import * as React from 'react'
+import { ConnectedRouter } from 'connected-react-router'
+import { History } from 'history'
 
 import { Router } from 'root/Router'
 
-export const Root: React.FC = () => {
-    return <Router/>
+interface RootProps {
+    history: History
+}
+
+export const Root: React.FC<RootProps> = ({ history }: RootProps) => {
+    return (
+        <ConnectedRouter history={history}>
+            <Router/>
+        </ConnectedRouter>
+    )
 }

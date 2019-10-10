@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
+import { connectRouter } from 'connected-react-router'
 // import { dialogState } from '../modules/Dialog'
 // import { drawerState } from '../modules/Drawer'
-// import { routerReducer } from 'react-router-redux'
 // import { signInRootReducer } from '../modules/SignIn/SignIn.state'
 
-const rootReducer = combineReducers({
-    // routing: routerReducer,
+const createRootReducer = (history) => combineReducers({
+    router: connectRouter(history),
     // signInState: signInRootReducer,
 })
 
-export default rootReducer
+export default createRootReducer
