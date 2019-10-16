@@ -7,6 +7,9 @@
 - [x] Make a simple reducer and action
 - [ ] Read about React with TS and convert basic page fully to TS
 - [ ] Init Redux with TS (https://redux.js.org/recipes/usage-with-typescript)
+- [ ] Init styles
+- [ ] Style basic page
+- [ ] Read about and connect linter
 
 ##### ^ That (+ styles connected and linter) could be added for boilerplate project ^
 
