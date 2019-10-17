@@ -32,3 +32,6 @@ https://medium.com/hackernoon/the-100-correct-way-to-split-your-chunks-with-webp
 ### Things to think about
 
 [How to use *react-hot-loader* better with TS](https://github.com/gaearon/react-hot-loader#typescript)
+
+### About correct typescript usage
+[Way to handle typing events in TS](https://stackoverflow.com/questions/45089866/specifying-onclick-event-type-with-typescript-and-react-konva/45106836#45106836)

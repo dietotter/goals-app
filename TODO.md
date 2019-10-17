@@ -5,11 +5,13 @@
 - [x] Init routes with Redux (https://redux.js.org/advanced/usage-with-react-router, https://github.com/supasate/connected-react-router)
 - [x] Enable hot module replacement (https://github.com/gaearon/react-hot-loader/)
 - [x] Make a simple reducer and action
-- [ ] Read about React with TS and convert basic page fully to TS
+- [x] Read about React with TS and convert basic page fully to TS
 - [ ] Init Redux with TS (https://redux.js.org/recipes/usage-with-typescript)
+- [ ] Convert everything present to this point to TS
+- [ ] Read about and connect tslint
 - [ ] Init styles
 - [ ] Style basic page
-- [ ] Read about and connect linter
+- [ ] ? Read about and connect ESLint ?
 
 ##### ^ That (+ styles connected and linter) could be added for boilerplate project ^
 

@@ -2,11 +2,15 @@ import * as React from 'react'
 import { createDemoGoals } from '../../../demoData/goals'
 
 interface IProps {
-
+  goalsState: any,
+  push: any,
+  goalsActions: any
 }
 
 interface IState {
-
+  newGoal: string,
+  dueDate: string,
+  [name: string]: string // it fixes TS issue in handleChange method, don't know if it's proper way to solve it
 }
 
 export class GoalsView extends React.Component<IProps, IState> {
@@ -21,20 +25,19 @@ export class GoalsView extends React.Component<IProps, IState> {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleChange (name) {
-    return event => this.setState({ [name]: event.target.value })
+  handleChange (name: string) {
+    return (event: React.ChangeEvent<HTMLInputElement>) => this.setState({ [name]: event.target.value })
   }
 
-  handleSubmit(event) {
-    //@ts-ignore
+  handleSubmit(event: React.MouseEvent<HTMLInputElement>) {
     const { newGoal, dueDate } = this.state
-    //@ts-ignore
     const { goalsActions: { add } } = this.props
     if (newGoal && dueDate) {
       add({
         name: newGoal,
         due: dueDate
       })
+      this.setState({newGoal: '', dueDate: ''})
     } else {
       alert('Fill in all fields')
     }
@@ -42,9 +45,7 @@ export class GoalsView extends React.Component<IProps, IState> {
   }
 
   render() {
-    //@ts-ignore
     const { goalsState: { goals }} = this.props
-    //@ts-ignore
     const { newGoal, dueDate } = this.state
 
     return (
