@@ -10,8 +10,18 @@ export const GOALS_GET_ALL = 'goals/GET_ALL'
 export const GOALS_GET = 'goals/GET'
 export const GOALS_ADD = 'goals/ADD'
 export const GOALS_DELETE = 'goals/DELETE'
+// REDO action types as enum when will be adding TS to actions
 
-const initialState = {
+interface IGoal {
+    name: string,
+    due: string
+}
+
+export interface IGoalsState {
+    goals: Array<IGoal>
+}
+
+const initialState: IGoalsState = {
     goals: []
 }
 

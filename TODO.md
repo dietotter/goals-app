@@ -6,9 +6,9 @@
 - [x] Enable hot module replacement (https://github.com/gaearon/react-hot-loader/)
 - [x] Make a simple reducer and action
 - [x] Read about React with TS and convert basic page fully to TS
-- [ ] Init Redux with TS (https://redux.js.org/recipes/usage-with-typescript)
-- [ ] Convert everything present to this point to TS
-- [ ] Read about and connect tslint
+- [x] Init Redux with TS (https://redux.js.org/recipes/usage-with-typescript) (except actions)
+- [x] Read about and connect tslint
+- [ ] Convert everything present to this point to TS (except redux actions)
 - [ ] Init styles
 - [ ] Style basic page
 - [ ] ? Read about and connect ESLint ?
@@ -19,4 +19,4 @@
 
 
 ### Postponed:
-- [ ] 
+- [ ] Convert redux actions to TS (read links)

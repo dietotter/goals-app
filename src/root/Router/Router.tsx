@@ -11,9 +11,7 @@ export const Router: React.FC<IProps> = () => {
     <BrowserRouter forceRefresh={false}>
       <Layout>
         <Switch>
-          {routes.map(props => {
-            return <Route {...props} key={props.path} />
-          })}
+          {routes.map(props => <Route {...props} key={props.path} />)}
         </Switch>
       </Layout>
     </BrowserRouter>

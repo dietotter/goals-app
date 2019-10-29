@@ -1,15 +1,16 @@
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import { bindActionCreators, Dispatch } from 'redux'
 import { push } from 'connected-react-router'
 
 import View from './Goals.view'
 import { actions } from 'app-redux/ducks/Goals'
+import { RootState } from 'app-redux/types'
 
 const Goals = connect(
-    (state: any) => ({
+    (state: RootState) => ({
         goalsState: state.goals
     }),
-    dispatch => ({
+    (dispatch: Dispatch) => ({
         push: bindActionCreators(push, dispatch),
         goalsActions: bindActionCreators(actions, dispatch),
     })
